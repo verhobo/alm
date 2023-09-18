@@ -21,6 +21,7 @@ from django.conf.urls import url
 from curriculums import views
 
 urlpatterns = [
-    url(r'^$', views.home, name='home'),
+    path("", views.home, name="home"),
     url(r'^admin/', admin.site.urls),
+    url(r'^coding/', views.coding_class, name='coding')
 ]

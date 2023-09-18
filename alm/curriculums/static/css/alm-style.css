@@ -1,0 +1,39 @@
+
+
+
+.logo-responsive {
+    width:100%;
+    width:100px;
+}
+
+.navbar-collapse {
+    background-color: black;
+    border-radius:12px;
+    display: flex;
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+
+.footer {
+   background-color: grey;
+   color: white;
+   font-weight:italic;
+   font-size: 8pt;
+   text-align: center;
+}
+
+.front-page {
+   min-height:500px;
+   width: 90%;
+   background-color: lightgrey;
+   border-radius: 12px;
+   padding:25px 25px 25px 25px;
+   margin-top: 10px;
+   margin-bottom: 30px;
+   color: black;
+   font-wight: bold;
+}

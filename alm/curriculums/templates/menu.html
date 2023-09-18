@@ -1,0 +1,29 @@
+{% load static %}
+<nav class="navbar navbar-dark font-weight-bold navbar-expand-md" aria-label="main" style="width:100%;">
+
+    <a class="navbar-brand" href="/">
+      <div class="media">
+        <div class="media-body">
+          <img class="logo-responsive" src="{% static 'images/alm_logo.jpg' %}"
+               alt="ALM School">
+        </div>
+      </div>
+    </a>
+
+    <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#menu-content" aria-controls="menu-content" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse" id="menu-content">
+        <br>
+        <ul class="navbar-nav">
+            {% block navbar_left %}
+            <!-- game views -->
+
+            <li><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+            <li>
+			  <a class="nav-link" href="{% url 'coding' %}">Coding</a>
+            {% endblock %}
+        </ul>
+    </div>
+</nav>
