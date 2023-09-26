@@ -20,9 +20,28 @@
             {% block navbar_left %}
             <!-- game views -->
 
-            <li><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+            <li><a class="nav-link" style="border:1px solid white;border-radius:20pt;" href="{% url 'home' %}">Home</a></li>
             <li>
-			  <a class="nav-link" href="{% url 'coding' %}">Coding</a>
+                <a class="nav-link" style="border:1px solid white;border-radius:20pt;" href="{% url 'coding' %}">Current Homework</a></li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" style="border:1px solid white;border-radius:20pt;" data-toggle="dropdown" href="#" id="project1" aria-expanded="false">
+                  Project #1
+              </a>
+              <div class="dropdown-menu" aria-labelledby="project1">
+                  <div class="dropdown">
+                  {% for student in students %}
+
+                      <a class="dropdown-item" href="{% url 'project1' student %}">{{student|capfirst}}</a>
+
+                      {% endfor %}
+              </div>
+              </div>
+            </li>
+
+
+
             {% endblock %}
         </ul>
     </div>

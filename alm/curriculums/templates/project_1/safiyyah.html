@@ -1,0 +1,99 @@
+
+{% extends "project_base.html" %}
+{% block content %}
+<html>
+<head>
+  <style>
+
+body {
+  background: pink;
+}
+
+img.main-picture {
+  width: auto;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1.page-name {
+  font-size: 20pt;
+  font-weight: bold;
+  color: black;
+  background-color: seagreen;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  font-family: Monospace, Courier;
+  text-align: center;
+}
+
+.picture {
+  padding: 20px 20px 20px 20px;
+  height: 600px;
+  width: 600px;
+}
+
+.page-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  color: black;
+  background-color: seagreen;
+  font-size: 12pt;
+  font-weight: bold;
+}
+  </style>
+</head>
+<body>
+<h1 class="page-name">
+sloth Pictures
+</h1>
+
+<nav class="page-buttons">
+  <button onclick="changePicture('my_picture_1')">
+  One
+  </button>
+  <button onclick="changePicture('my_picture_2')">
+  Two
+  </button>
+  <button onclick="changePicture('my_picture_3')">
+  Three
+  </button>
+</nav>
+
+<main class="picture">
+
+   <img class="main-picture" id="my_picture_1"
+   src="https://s.yimg.com/ny/api/res/1.2/hrfC1GMqaK.OJzf2sw3Z3w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTYzODtjZj13ZWJw/https://media.zenfs.com/en/pethelpful_915/dba5e397379c1113434bb1f46625eb16">
+
+   <img class="main-picture" id="my_picture_2" style="display:none;"
+   src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Mother_and_baby_sloth_crossing_the_road.jpg">
+
+   <img class="main-picture" id="my_picture_3" style="display:none;"
+   src="https://images.saymedia-content.com/.image/t_share/MTc0OTY5MjAyNjA3MDA3MTcy/pet-sloth-care.jpg">
+
+
+</main>
+</body>
+</html>
+
+<script>
+function changePicture(picture_id) {
+   // first, hide all of the pictures
+   document.getElementById('my_picture_1').style.display = "none";
+   document.getElementById('my_picture_2').style.display = "none";
+   document.getElementById('my_picture_3').style.display = "none";
+   // second, display only the picture you want to see
+   document.getElementById(picture_id).style.display = "block";
+}
+
+</script>
+
+
+{% endblock %}
