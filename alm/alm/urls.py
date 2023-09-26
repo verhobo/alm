@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from django.conf.urls import url
+from django.conf.urls import re_path
 
 from curriculums import views
 
 urlpatterns = [
     path("", views.home, name="home"),
-    url(r'^admin/', admin.site.urls),
-    url(r'^coding/', views.coding_class, name='coding')
+    re_path(r'^admin/', admin.site.urls),
+    re_path(r'^coding/', views.coding_class, name='coding')
 ]
