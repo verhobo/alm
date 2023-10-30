@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+
+<body>
+<div class="front-page">
+    <h1> Submitted Work </h1>
+
+    <table style="width:100%;border:1px solid black;">
+        {% for submission in submissions %}
+        <tr>
+            <td> {{submission.project.name}} </td>
+            <td> {{submission.student.name|capfirst}} </td>
+            <td> <a href="{{submission.content}}">{{submission.content}}</a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
+{% endblock %}

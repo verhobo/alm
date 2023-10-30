@@ -26,14 +26,14 @@ SECRET_KEY = 'django-insecure-1qwhb^w-0vz%*j=guogl6q848eavyp3$)#e#1ns&gc#6dig530
 #SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+DEBUG = True
+#CSRF_COOKIE_SECURE = True
+#SESSION_COOKIE_SECURE = True
 #SECURE_SSL_REDIRECT = True
-SECURE_REFERRER_POLICY = "same-origin"
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
-USE_X_FORWARDED_HOST = True
+#SECURE_REFERRER_POLICY = "same-origin"
+#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#SECURE_SSL_REDIRECT = True
+#USE_X_FORWARDED_HOST = True
 
 ALLOWED_HOSTS = ["104.131.166.109", "localhost", "www.almhomeschool.com", "almhomeschool.com", "127.0.0.1"]
 

@@ -23,5 +23,8 @@ urlpatterns = [
     path(r'admin/', admin.site.urls),
     path(r'coding/', views.coding_class, name='coding'),
 
+    re_path(r'submit_work', views.submit_work, name="submit_work"),
+    re_path(r'submissions_list', views.submissions_list, name="submissions_list"),
     re_path(r'project1/(?P<student_name>\w+)/', views.project1, name="project1"),
+
 ]

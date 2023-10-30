@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+{% block content %}
+<html>
+
+<body>
+<div class="front-page">
+    <h1> Submit your work here!</h1>
+    <hr role="presentation">
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="student">Who are you?</label>
+        <select id="student" name="student">
+            {% for st in students %}
+            <option value="{{st.pk}}">{{st.name}}</option>
+            {% endfor %}
+        </select>
+<br>
+
+        <label for="project">Which project are you submitting this work for?</label>
+        <select id="project" name="project">
+            {% for pr in projects %}
+            <option value="{{pr.pk}}">{{pr.name}}</option>
+            {% endfor %}
+        </select>
+        <br>
+
+        <label for="content">Copy/paste the link to your jsfiddle.net work here:</label>
+        <input type="text" id="content" name="content">
+
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
+{% endblock %}

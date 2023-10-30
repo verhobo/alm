@@ -21,7 +21,7 @@
             <!-- game views -->
 
             <li><a class="nav-link" style="border:1px solid white;border-radius:20pt;" href="{% url 'home' %}">Home</a></li>
-            <li>
+    <!--        <li>
                 <a class="nav-link" style="border:1px solid white;border-radius:20pt;" href="{% url 'coding' %}">Current Homework</a></li>
 
 
@@ -31,14 +31,16 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="project1">
                   <div class="dropdown">
-                  {% for student in students %}
+                      DISABLED FOR NOW
+
+                  {% for student in students_list %}
 
                       <a class="dropdown-item" href="{% url 'project1' student %}">{{student|capfirst}}</a>
 
                       {% endfor %}
               </div>
               </div>
-            </li>
+            </li> -->
 
 
 
